@@ -1,0 +1,25 @@
+.Navbar {
+    min-height: 5vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2rem calc(2vw + 4rem);
+    border-bottom: 1px solid lightgrey;
+    gap: 1rem;
+
+}
+.NavbarItem{
+    height: 20px;
+    width:20px;
+    list-style: none;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid seashell;
+
+}
+.NavbarItem > img{
+    object-fit: cover;
+    height: 100%;
+
+}

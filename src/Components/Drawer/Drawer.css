@@ -1,0 +1,16 @@
+.drawer{
+    position: absolute;
+    height: 100vh;
+    width: 0;
+    animation-direction: reverse;
+    background-color: #f3f3f3;
+    text-align: center;
+    transition: all .3s;
+
+}
+
+.opened{
+    width: 45vw;
+    transition: width .3s ease-in-out; 
+    z-index: 999999999;   
+}
