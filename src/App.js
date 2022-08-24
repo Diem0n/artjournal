@@ -1,22 +1,31 @@
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import Gallery from './Components/Gallery/Gallery';
-import { useState } from 'react';
+import { useState , useEffect } from 'react';
 import Drawer from './Components/Drawer/Drawer'
+
 function App() {
   const [drawer , setDrawer] = useState('closed');
-  const [context , setContext] = useState('')
-
+  const [context , setContext] = useState('');
   const handleClick = (state , context)=> {
-    setDrawer(state);
-   setContext(context)
+    setDrawer(state)
+    setContext(context)
   }
+  useEffect( () =>{
+    drawer === 'opened' ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'scroll'
+   
+  })
+
+  
+  
   return (
 
-    <div className="App">
-      <Drawer context={context} state={drawer} />
-      <Navbar state={drawer} handleClick={handleClick} />
-      <Gallery />
+    <div className='App'>
+      <Drawer context={context} state={drawer} handleClick={handleClick}/>
+      <Navbar context={context} state={drawer} handleClick={handleClick} />
+      <Gallery onclick={()=>{
+        handleClick('closed' , '')
+      }} context={context} />
     </div>
   );
 }

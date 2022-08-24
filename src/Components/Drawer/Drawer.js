@@ -1,19 +1,19 @@
 import React from "react";
+import DrawerNav from  '../DrawerNav/DrawerNav'
 import './Drawer.css'
 
-const Drawer = ({state, context}) =>{
+const Drawer = ({state , handleClick , context}) =>{
     return(
         <div className=
             {
                 state==='opened'?"drawer opened":"drawer"
             }
         >
-            <h1 style={{
-                display : "flex",
-                alignItems : "center", 
-                justifyItems : "center", 
-            }}>{context}</h1>
-        </div>
+            {state  === 'opened'?
+            <DrawerNav handleClick={handleClick}/>: null
+            }
+            {context===''}
+            </div>
     )
 }
 export default Drawer;

@@ -1,4 +1,7 @@
 .App{
-    overflow: hidden;
     position: relative;
+    
+}
+.hide{
+    overflow: hidden;
 }

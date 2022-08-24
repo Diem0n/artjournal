@@ -3,15 +3,19 @@
     height: 100%;
     object-fit: cover;
     cursor: pointer;
+    transition: all .5s ease;
+    
 }
 .imageContainer{
     height: 400px;
     width: 100%;
     overflow: hidden;
-    transition: all cubic-bezier(0.23, 1, 0.320, 1);
+
     border-radius: .6rem ;
 
 }
 .imageContainer:hover img{
     filter: brightness(50%);
+    scale: 1.2;
+    transform: rotate(1deg);
 }

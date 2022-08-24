@@ -1,6 +1,6 @@
 .drawer{
     position: absolute;
-    height: 100vh;
+    height: 100%;
     width: 0;
     animation-direction: reverse;
     background-color: #f3f3f3;
@@ -10,7 +10,8 @@
 }
 
 .opened{
-    width: 45vw;
+    width: 50vw;
     transition: width .3s ease-in-out; 
-    z-index: 999999999;   
+    z-index: 99;
+    
 }

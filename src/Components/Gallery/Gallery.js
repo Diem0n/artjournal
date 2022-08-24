@@ -1,9 +1,10 @@
 import React from "react";
 import './Gallery.css'
 import CardList from '../CardList/CardList'
-const Gallery = ()=>{
+const Gallery = ({context})=>{
     return(
-      <div className="Gallery">
+      <div className={
+        context === ''?"Gallery":"Gallery sendBack"}>
         <CardList />
       </div>
     )
