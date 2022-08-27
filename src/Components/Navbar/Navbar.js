@@ -1,6 +1,7 @@
 import React from "react";
 import "./NavBar.css"
 import search from "../icons/search.svg"
+import add from "../icons/add.svg"
 const Navbar = ({context, state , handleClick}) => {
     return (
         <nav className={context !==''?"Navbar sendBack" :'Navbar'}>
@@ -12,6 +13,16 @@ const Navbar = ({context, state , handleClick}) => {
             className="NavbarItem">
                 <img src={search} alt='search icon' />
             </div>
+
+            <div onClick={()=>
+            {
+                state === 'opened' ? handleClick('closed' , 'add'):handleClick('opened' , 'add');
+            }
+            }   
+             className="NavbarItem primary">
+                <img  className="add" alt='plus icon' src={add} />
+            </div>
+
             <div onClick={()=>
             {
                 state === 'opened' ? handleClick('closed' , 'profile'):handleClick('opened' , 'profile')

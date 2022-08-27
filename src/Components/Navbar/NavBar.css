@@ -15,7 +15,8 @@
     padding: 1rem;
     cursor: pointer;
     border-radius: 50%;
-    border: 1px solid seashell;
+    border: 1px solid #e0e0e1;
+
 
 }
 .NavbarItem > img{
@@ -31,5 +32,8 @@
 }
 .sendBack{
 	pointer-events: none;
-	filter: blur(10px);
+	filter: blur(2px);
+}
+.primary{
+    background-color: #b00b69;
 }
