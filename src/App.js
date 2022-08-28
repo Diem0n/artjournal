@@ -5,8 +5,8 @@ import { useState , useEffect } from 'react';
 import Drawer from './Components/Drawer/Drawer'
 
 function App() {
-  const [drawer , setDrawer] = useState('opened');
-  const [context , setContext] = useState('add');
+  const [drawer , setDrawer] = useState('closed');
+  const [context , setContext] = useState('');
   const handleClick = (state , context)=> {
     setDrawer(state)
     setContext(context)
